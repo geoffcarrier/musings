@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#Initialising the List.  Continuity assured.
+shoppingList=`cat .shoppinglist`
+#
+# Chance to renew
+read -rp "New shopping list? y/n. " resp
+
+if echo $resp | grep -iq '^y'
+then
+   shoppingList=""
+fi
+#
+# Main Program - creating / amending the list.
+#
+echo "Operating on your shopping list. What would you like to do?"
+echo "Please choose a number. Remember to hit 'enter' to continue past the end prompt. "
+select i in add show quit
+do
+  case $i in 
+    show) echo "Your shopping list is: "
+      echo "$shoppingList" | more;; # Showing the list
+
+    add) read -rp "Enter the name of the item for your shopping list. " item
+      # Conditionally growing the list.
+      if test -z "$shoppingList" && test -n "$item"
+      then
+        shoppingList="$item"
+      else
+        shoppingList="${shoppingList} : $item"
+      fi
+      echo "Shopping list now is $shoppingList"|more;;
+
+    quit) 
+      echo "$shoppingList" >.shoppingList
+      exit;; # A nuclear exit
+  esac
+
+  echo
+  echo add=1 show=2 quit=3.
+  echo Please enter a number.
+
+done
+
