@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Variables
+shopDir="$HOME/.shopping"
+PS3="add=1 show=2 remove=3 quit=4: Please enter a number. "
+# Functions
+showfn() {
+          clear
+          echo -e "Your shopping list is: "
+          echo -e "Item \t\t\tQuantity"
+          for showItem in `ls`
+          do
+            qty=`head $showItem`
+            echo -e "$showItem \t\t\t$qty"
+          done 
+}
+#
+#Infrastructure
+test -d $shopDir || mkdir -p $HOME/.shopping 
+cd $shopDir
+
+# Chance to renew
+clear
+read -rp "New shopping list? y/n. " response
+
+if echo -e $response | grep -iq '^y'
+then
+  rm -rf $shopDir/*
+fi
+#
+# Main Program - creating / amending the list.
+#
+echo -e "Operating on your shopping list. What would you like to do?"
+echo -e "Please choose a number. Remember to hit 'enter' to continue past the end prompt. "
+select operation in add show remove quit
+do
+  case $operation in 
+    show) 
+          showfn ;;
+
+    add) read -rp "Enter the name of the item for your shopping list. " item
+          if test -z "$item"
+          then
+            continue
+          fi
+          item=`echo $item | tr ' ' '_'`
+      # Conditionally growing the list.
+       if test -f "$item"
+       then
+             qty=`head $item`
+             ((qty=qty+1))
+             echo -e $qty > $item
+       else
+             # Paranoid removal of the non-existent.
+             rm -rf $item 2>/dev/null
+             echo -e 1 >$item
+       fi 
+       # Reassuring message based on an actual check.
+       if test -f $item && cat $item | head -1 | grep -q '^[0-9][0-9]*$' # First line should be a single number.
+       then
+         echo -e "Item added."
+       else
+         echo -e "For some reason it has not been possible to add the item to the list. Apologies. Call support."
+       fi
+       showfn
+
+       ;;
+    remove) read -rp "Enter the name of the item you wish to remove. " item
+            qty=`head $item`
+            ((qty=qty-1))
+            if test "$qty" -lt 1 && rm $item
+            then
+               echo -e "$item removed"
+            else
+               echo "$qty"> $item
+               echo -e "$item not removed. Quantity: $qty. "
+            fi ;;
+    quit) 
+      exit;; # A nuclear exit
+  esac
+
+
+done
+
