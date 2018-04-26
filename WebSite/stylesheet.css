@@ -1,0 +1,324 @@
+body,p,img,head {
+font-family: OpenSans;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: rgb(204,255,255);
+}
+
+@media screen and (min-width: 100px) {
+ html {  box-sizing: border; font-size: 2px; }
+}
+@media screen and (min-width: 150px) {
+ html {  box-sizing: border; font-size: 3px; }
+}
+@media screen and (min-width: 200px) {
+ html {  box-sizing: border; font-size: 4px; }
+}
+@media screen and (min-width: 250px) {
+ html {  box-sizing: border; font-size: 5px; }
+}
+@media screen and (min-width: 300px) {
+ html {  box-sizing: border; font-size: 6px; }
+}
+@media screen and (min-width: 350px) {
+ html {  box-sizing: border; font-size: 7px; }
+}
+@media screen and (min-width: 400px) {
+ html {  box-sizing: border; font-size: 8px; }
+}
+@media screen and (min-width: 450px) {
+ html {  box-sizing: border; font-size: 9px; }
+}
+@media screen and (min-width: 500px) {
+ html {  box-sizing: border; font-size: 10px; }
+}
+@media screen and (min-width: 550px) {
+ html {  box-sizing: border; font-size: 11px; }
+}
+@media screen and (min-width: 600px) {
+ html {  box-sizing: border; font-size: 12px; }
+}
+@media screen and (min-width: 650px) {
+ html {  box-sizing: border; font-size: 13px; }
+}
+@media screen and (min-width: 700px) {
+ html {  box-sizing: border; font-size: 14px; }
+}
+@media screen and (min-width: 750px) {
+ html {  box-sizing: border; font-size: 15px; }
+}
+@media screen and (min-width: 800px) {
+ html {  box-sizing: border; font-size: 16px; }
+}
+@media screen and (min-width: 850px) {
+ html {  box-sizing: border; font-size: 17px; }
+}
+@media screen and (min-width: 900px) {
+ html {  box-sizing: border; font-size: 18px; }
+}
+@media screen and (min-width: 950px) {
+ html {  box-sizing: border; font-size: 19px; }
+}
+@media screen and (min-width: 1000px) {
+ html {  box-sizing: border; font-size: 20px; }
+}
+@media screen and (min-width: 1050px) {
+ html {  box-sizing: border; font-size: 21px; }
+}
+@media screen and (min-width: 1100px) {
+ html {  box-sizing: border; font-size: 22px; }
+}
+@media screen and (min-width: 1150px) {
+ html {  box-sizing: border; font-size: 23px; }
+}
+@media screen and (min-width: 1200px) {
+ html {  box-sizing: border; font-size: 24px; }
+}
+@media screen and (min-width: 1250px) {
+ html {  box-sizing: border; font-size: 25px; }
+}
+@media screen and (min-width: 1300px) {
+ html {  box-sizing: border; font-size: 26px; }
+}
+@media screen and (min-width: 1350px) {
+ html {  box-sizing: border; font-size: 27px; }
+}
+@media screen and (min-width: 1400px) {
+ html {  box-sizing: border; font-size: 28px; }
+}
+@media screen and (min-width: 1450px) {
+ html {  box-sizing: border; font-size: 29px; }
+}
+
+
+
+
+
+h1 { 
+	font-size: 3rem; 
+	background-color: lightblue;  
+	float-right;
+	text-align: central;
+	}
+@font-face {
+        font-family: OpenSans;
+        src: url(/project/fonts/OpenSans-Regular.ttf);
+}
+.outer {
+        position: relative;
+		width: 95%;
+        border: 0.1rem solid blue;
+        padding: 5px;
+        margin: 2%;
+		font-size: 1rem;
+        background-color: lightblue;
+		text-align: center;
+		overflow: auto;
+}
+.inner {
+        position: relative;
+		width: 80%;
+        border: 0.08rem solid blue;
+        padding: 0.1%;
+        margin: 2.8%;
+		font-size: 1rem;
+        background-color: lightblue;
+		overflow: auto;
+}
+.lower {
+        position: relative;
+        border: 2px solid blue;
+        padding: 5px;
+        margin: 10px;
+        background-color: lightblue;
+}
+
+.static-border{
+		border: 2px solid blue;
+		padding: 25px;
+		margin: 10px;
+		background-color: lightblue;
+		position: static;
+}
+
+.photoWrap {
+        margin: 2%;
+        float: left;
+        font-size: 20px;
+		width: 15%;
+		overflow: auto;
+}
+.diagWrap {
+        margin: 5%;
+        float: left;
+        font-size: 20px;
+		width: 15%;
+		overflow: auto;
+}
+.video {
+		margin: 10px auto;
+        font-size: 20px;
+		width:50%;
+		border: 2px solid blue;
+		padding: 25px;
+		background-color: lightblue;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.mlogo {
+		display:inline-block;
+		overflow:hidden;
+		position: absolute;
+		border: 2px solid blue;
+		padding: 0.5%;
+        margin: 1%;
+        background-color: white;
+		top: 1%;
+		left: 90%;
+		width: 7%;
+		font-size: 0.7rem;
+		;
+}
+.logo {
+	position: absolute;
+    margin: auto;
+    top: 5%;
+    left: 85%;
+    bottom: 5%;
+		border: 0.08rem solid blue;
+		padding: 2%;
+        background-color: white;
+		width: 10%;
+		font-size: 0.45rem;
+		;
+}
+
+.logoText {
+		position: absolute;
+		border: 0px solid blue;
+		padding: 1%;
+        margin: 10%;
+        background-color: white;
+		top: 82px;
+		right: -12px;
+		z-index: 10;
+		font-size: 7px;
+		width: 7em;
+}
+
+.narrative {
+		padding: 10px;
+		margin: 10px;
+		-webkit-column-count:2
+		
+}
+
+.narrative-distinct {
+		position: relative;
+		left: 25%;
+		top: 5%;
+		padding: 2%;
+		margin: 2%;
+	background-color: lightblue;
+	width: 50em;
+	overflow: auto;
+}
+
+.scaledFilter {
+		position: absolute;
+		top: 0px;
+		left: -100px;
+		
+}
+.topPotSnip {
+		position: absolute;
+		top: 34%;
+		left: 80%;
+		
+		
+}
+.ringsRowOf {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		
+}
+.blankLines {
+               height:110px;
+			   width: 650px;
+			   position: relative;
+            }			   
+
+.textWrap {
+        margin: 10px;
+        float: right;
+        font-size: 20px;
+}
+.linkWrap {
+        float: left;
+        font-size: 20px;
+}
+.trb {
+        margin: 5%;
+		font-size: 1rem;
+		background-color: lightblue;
+        font-family: OpenSans;
+        -webkit-column-count:2;
+}
+.userGallery {
+        border-style: solid;
+        border-color: rgb(150,150,200);
+        border-width: 2px;
+        padding: 5px;
+        margin: 10px;
+	}
+.textStd {
+        margin: 10px;
+        float: left;
+        font-size: 20px;
+}
+p.fixedPos {
+	position: fixed; 
+	top: 30px; 
+	right: 5px; 
+	font-size: smaller; 
+	background-color: SpringGreen;
+}
+.relativePos { 	
+	position: relative;
+        top: 100px; 
+	left: 100px; 
+	width: 60%; 
+	background-color: SpringGreen;
+	font-size: 20px;
+}
+.absolutePos { 	
+        position: absolute; 
+        top: 1px
+}
+img.fdmFloat 	 	{ float: left; }
+p.disableFloat	{ clear: right; }
+
+
+@media screen and (max-width: 600px) {
+	.trb {
+        -webkit-column-count:1;
+	}
+	.narrative {
+        -webkit-column-count:1;
+	}
+}
