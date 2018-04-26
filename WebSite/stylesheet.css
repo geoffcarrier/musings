@@ -5,7 +5,10 @@ font-family: OpenSans;
         border: 0;
         background-color: rgb(204,255,255);
 }
-
+@font-face {
+        font-family: OpenSans;
+        src: url(/project/fonts/OpenSans-Regular.ttf);
+}
 @media screen and (min-width: 100px) {
  html {  box-sizing: border; font-size: 2px; }
 }
@@ -101,10 +104,7 @@ h1 {
 	float-right;
 	text-align: central;
 	}
-@font-face {
-        font-family: OpenSans;
-        src: url(/project/fonts/OpenSans-Regular.ttf);
-}
+
 .outer {
         position: relative;
 		width: 95%;
@@ -179,20 +179,8 @@ h1 {
 	height: 100%;
 }
 
-.mlogo {
-		display:inline-block;
-		overflow:hidden;
-		position: absolute;
-		border: 2px solid blue;
-		padding: 0.5%;
-        margin: 1%;
-        background-color: white;
-		top: 1%;
-		left: 90%;
-		width: 7%;
-		font-size: 0.7rem;
-		;
-}
+
+
 .logo {
 	position: absolute;
     margin: auto;
@@ -207,18 +195,6 @@ h1 {
 		;
 }
 
-.logoText {
-		position: absolute;
-		border: 0px solid blue;
-		padding: 1%;
-        margin: 10%;
-        background-color: white;
-		top: 82px;
-		right: -12px;
-		z-index: 10;
-		font-size: 7px;
-		width: 7em;
-}
 
 .narrative {
 		padding: 10px;
@@ -314,11 +290,50 @@ img.fdmFloat 	 	{ float: left; }
 p.disableFloat	{ clear: right; }
 
 
-@media screen and (max-width: 600px) {
-	.trb {
-        -webkit-column-count:1;
-	}
-	.narrative {
-        -webkit-column-count:1;
-	}
+.table-editable {
+  position: relative;
+  
+  .glyphicon {
+    font-size: 20px;
+  }
 }
+th,tr,td {
+	position: relative;
+		width: 80%;
+        border: 0.08rem solid blue;
+        padding: 0.1%;
+        margin: 2.8%;
+		font-size: 1rem;
+        background-color: lightblue;
+		overflow: auto;
+}
+.table-remove {
+  color: #700;
+  cursor: pointer;
+  
+  &:hover {
+    color: #f00;
+  }
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+  
+  &:hover {
+    color: #00f;
+  }
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  
+  &:hover {
+    color: #0b0;
+  }
+}
+#
